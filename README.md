@@ -20,5 +20,17 @@ bucket_properties = bucket.create(
 print(bucket_properties)
 print("Bucket created successfully......!")
 ```
+### Uploading file to S3 bucket.
+```
+import boto3
+resource = boto3.client('s3')
+resource.upload_file(
+    Filename='file_1.png',
+    Bucket='Bucket_Name',
+    key='save_1.png'
+)
+print("File Uploaded to your S3 Bucket Successfully")
+```
+
 
 
